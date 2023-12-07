@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/pexels-annesophie-parent-2105416.jpg) center center;
+    background-size: cover;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    font-size: 4rem; 
+    font-weight: bold; 
+    background: -webkit-linear-gradient(45deg, #ffc209, #fffefe, #f11000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center; 
+    margin: 100px 0px 10px;
+    padding: 10px; 
+
+}
+
+h3{
+    font-size: 3rem; 
+    font-weight: bold; 
+    background: -webkit-linear-gradient(45deg, #09c1ff, #fffefe, #5cf100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center; 
+    margin: 20px 0px 50px;
+}
+
+.countdownTimer{
+    display: flex;
+    justify-content: center;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+    font-size: 1.25rem;
+    margin-left: 2rem;
+}
+
+.input input{
+    padding: 0.5rem;
+    height: 5rem;
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.input.days input,
+.input.days label{
+    color: #228B22;
+}
+
+.input.hours input,
+.input.hours label{
+    color: #4169E1;
+}
+
+.input.minutes input,
+.input.minutes label{
+    color: #32CD32;
+}
+
+.input.seconds input,
+.input.seconds label{
+    color: #FF69B4;
+}
+
+
+
+
