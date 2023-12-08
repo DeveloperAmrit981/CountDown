@@ -1,6 +1,7 @@
 var dateTime;
 var formattedDate;
 var formattedTime;
+const LaunchTime = document.getElementById("endDate");
 window.onload = function() {
     var userInput = prompt("Please enter a date and time (format: YYYY-MM-DD HH:MM):");
     dateTime = new Date(userInput);
@@ -8,7 +9,7 @@ window.onload = function() {
          formattedDate = dateTime.toISOString().substring(0, 10);
          formattedTime = dateTime.toTimeString().substring(0, 5);
 
-         const LaunchTime = document.getElementById("endDate");
+         
         LaunchTime.innerText = ("Launch on: " + formattedDate + " " + formattedTime);
 
         alert("Date and Time: " + formattedDate + " " + formattedTime);
