@@ -26,7 +26,7 @@ const clock = () => {
     const end = new Date(dateTime);
     const now = new Date();
     const diff = (end - now)/1000;
-    if(diff <+ 0) {
+    if(diff <= 0) {
         LaunchTime.innerText = "We have Launched";
         return
     } ;
