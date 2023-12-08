@@ -1,11 +1,29 @@
+var dateTime;
+var formattedDate;
+var formattedTime;
+window.onload = function() {
+    var userInput = prompt("Please enter a date and time (format: YYYY-MM-DD HH:MM):");
+    dateTime = new Date(userInput);
+    if (!isNaN(dateTime.getTime())) {
+         formattedDate = dateTime.toISOString().substring(0, 10);
+         formattedTime = dateTime.toTimeString().substring(0, 5);
 
-const endDate = "2023-12-09T10:50:00"; 
-const LaunchTime = document.getElementById("endDate");
-LaunchTime.innerText = endDate;
+         const LaunchTime = document.getElementById("endDate");
+        LaunchTime.innerText = ("Launch on: " + formattedDate + " " + formattedTime);
+
+        alert("Date and Time: " + formattedDate + " " + formattedTime);
+    } else {
+        alert("Invalid Date/Time. Please enter in the format YYYY-MM-DD HH:MM.");
+    }
+};
+
+
+
+
 const inputs = document.querySelectorAll("input");
 
 const clock = () => {
-    const end = new Date(endDate);
+    const end = new Date(dateTime);
     const now = new Date();
     const diff = (end - now)/1000;
     if(diff < 0) {
